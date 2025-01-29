@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        font-size: 1.3rem;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f6f9;
+      }
+      .profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 370px;
+        width: 100%;
+        background: #fff;
+        border-radius: 24px;
+        padding: 25px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .profile-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 36%;
+        width: 100%;
+        border-radius: 24px 24px 0 0;
+        background-color: #e7dee0;
+      }
+
+      .image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #999b9e;
+        padding: 3px;
+        margin-bottom: 10px;
+      }
+      .image .profile-picture {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #fff;
+      }
+      .profile-picture {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .name {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .job-title {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .bio {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .location,
+      .email,
+      .utc-time {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .social-links a {
+        display: inline-block;
+        margin: 5px;
+        text-decoration: none;
+        color: #0077b5;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="image">
+        <img
+          src="/public/boss.jpg"
+          alt="Profile Picture"
+          class="profile-picture"
+          data-testid="profilePicture"
+        />
+      </div>
+      <div class="name" data-testid="fullName">Victor Samuel</div>
+      <div class="job-title" data-testid="jobTitle">Frontend Developer</div>
+      <p class="bio" data-testid="shortBio">
+        Passionate Frontend Developer with experience in building responsive web
+        applications. Skilled in React, Next.js, and modern web technologies.
+      </p>
+      <div class="location" data-testid="currentLocation">Lagos, Nigeria</div>
+      <div class="email" data-testid="emailAddress">
+        samuelvictoralexander@gmail.com
+      </div>
+      <div class="utc-time" data-testid="currentTimeUTC"></div>
+      <div class="social-links" data-testid="socialLinks">
+        <a
+          href="https://www.linkedin.com/in/victor-samuel-42a092220/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Bobleeswagger09" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://x.com/SecureBootSammy" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </div>
+
+    <script>
+      function updateTime() {
+        const utcTimeElement = document.querySelector(
+          "[data-testid='currentTimeUTC']"
+        );
+        const now = new Date();
+        utcTimeElement.textContent = `UTC Time: ${
+          now.toISOString().split("T")[1].split(".")[0]
+        } UTC`;
+      }
+      updateTime();
+    </script>
+  </body>
+</html>
