@@ -20,5 +20,3 @@ Each element follows the **correct `data-testid`** attribute for easy testing:
 | Email Address    | Displays professional email. | `data-testid="emailAddress"` |
 | Social Links     | Links to GitHub, LinkedIn, Twitter, etc. | `data-testid="socialLinks"` |
 | UTC Time         | Displays live UTC time.  | `data-testid="currentTimeUTC"` |
-
-## 📂 Project Structure
