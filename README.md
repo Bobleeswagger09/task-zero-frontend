@@ -3,10 +3,10 @@
 A **modern, responsive Profile Card** built with **HTML, CSS, and Vanilla JavaScript**. This card displays essential user details, including a **profile picture, name, job title, bio, location, email, social links, and dynamic UTC time**.
 
 ## 🚀 Features
-- ✅ **Fully Responsive** – Works on all screen sizes.
-- ✅ **Dynamic UTC Time** – Updates on page refresh.
-- ✅ **Clean UI/UX** – Simple and professional design.
-- ✅ **Accessible & Semantic HTML** – Easy to test with `data-testid` attributes.
+-  **Fully Responsive** – Works on all screen sizes.
+-  **Dynamic UTC Time** – Updates on page refresh.
+- **Clean UI/UX** – Simple and professional design.
+-  **Accessible & Semantic HTML** – Easy to test with `data-testid` attributes.
 
 ## 📌 Required Elements
 Each element follows the **correct `data-testid`** attribute for easy testing:
